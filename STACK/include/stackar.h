@@ -29,8 +29,14 @@ private:
 	int topo;
 	int capacidade;
 	
-	void resize(int _capacidade){
-	capacidade = 2 * _capacidade;
+	void resize(){
+	 	capacidade = 2*capacidade +1;
+         	Object *pt = new Object[capacidade];
+         	for ( auto i(0); i< capacidade ; i++){
+            		pt[i] = vetor[i];
+         	}
+         	delete [] vetor; 
+         	vetor = pt;
 	}
 
 };
