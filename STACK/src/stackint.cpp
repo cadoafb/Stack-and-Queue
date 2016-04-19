@@ -25,7 +25,7 @@ int stackInt::pop(void){
 void stackInt::push(int _value)
 {
 	if (topo == capacidade) // Não há mais espaço
-		resize(2*capacidade);
+		resize();
 
 	vetor[topo++] = _value;
 }
