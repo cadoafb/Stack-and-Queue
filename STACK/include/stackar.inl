@@ -29,7 +29,7 @@ template <class Object>
 void StackAr<Object>::push(const Object &_value)
 {
 	if (topo == capacidade) // Não há mais espaço
-		resize(2*capacidade);
+		resize();
 
 	vetor[topo++] = _value;
 }
