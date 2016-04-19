@@ -82,7 +82,7 @@ std::cout << ">>> Imprimindo Elementos da pilha..." << std::endl;
 	std::cout << std::endl;
 
 std::cout << ">>> Teste pop..." << std::endl;
-	//vetorteste3.pop();
+	vetorteste3.pop();
 	vetorteste3.print();
 	std::cout << std::endl;
 
