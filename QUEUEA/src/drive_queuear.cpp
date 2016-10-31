@@ -3,8 +3,8 @@
  *
  * Created on 15/04/2016
  */
-/**
- *
+
+/*
  * @author Adelino Afonso
  */
 
@@ -46,8 +46,9 @@ int main(){
 		QueueAr<int> numInt;
 		std::cout << "Enfileirando números de 1 a 99..." << std::endl;
 
-		for (int i = 0; i < 100; ++i)
+		for (int i = 0; i < 100; ++i){
 			numInt.enqueue(i);
+		}
 
 		numInt.print();
 
