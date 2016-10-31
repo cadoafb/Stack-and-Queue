@@ -2,12 +2,11 @@
 #include <stdexcept>      // std::length_error
 #include "stackint.h"
 
-stackInt::stackInt(int _size) : topo(0), capacidade(_size)
-{
+stackInt::stackInt(int _size) : topo(0), capacidade(_size){
 	vetor = new int(_size);
 }
-stackInt::~stackInt()
-{
+
+stackInt::~stackInt(){
 	delete[] vetor;
 }
 
@@ -22,16 +21,14 @@ int stackInt::pop(void){
 }
 
 
-void stackInt::push(int _value)
-{
+void stackInt::push(int _value){
 	if (topo == capacidade) // Não há mais espaço
 		resize();
 
 	vetor[topo++] = _value;
 }
 
-int stackInt::top(void) const
-{
+int stackInt::top(void) const{
 	if(topo == 0)
 		throw std::domain_error("Pilha vazia!");
 	return vetor[topo-1];
